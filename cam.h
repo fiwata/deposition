@@ -258,6 +258,7 @@ public:
 		return z;
 	}
 
+	//速度計算
 	void vcalc() {
 		double v;
 		double t;
@@ -704,6 +705,8 @@ public:
 	bool is_deposition_on() {
 		return getprefString(DEPOSITION_ON_OFF) == "ON";
 	}
+
+	//ステージ制御
 	void CCSV_reading() {
 		if (is_deposition_on()) {
 			setEV(std::stod(getprefString(EPV_KEY)));
