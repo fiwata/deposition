@@ -33,29 +33,16 @@ std::string digital_dev2() {
 	}
 }
 
-int total_bits = 300;
-
-double total_height = 5;
-double base_height = 1;
-double Spiral_height = 2;
-double total_step = 1000;//CSVファイルのステップ数
-
-double resolution = 1;
 double max_radius = 1.5;
 double count_redeposition = 0;
-double base_steps = (base_height / total_height )* total_bits;
-double move_r_steps = (Spiral_height / total_height) * total_bits;
 
-double current_height = 0;
-double radiusX = 0;
-double radiusY = 0;
-double radiusZ = 0;
-
-int miliseconds_deposition = 1;//ステージ下降
-double initial_value = 1;
+double total_height = 5;//ピラー全体の長さ
+double total_step = 1000;//CSVファイルのステップ数
+int miliseconds_deposition = 1;//ステージ下降時の待機時間
+double initial_value = 1;//待機時間の初期値
 double redep_pluse = 150;//等差数列の公差
 double ratio = 2;//等比数列の公比
-int miliseconds_re_deposition = 1;//ステージ上昇
+int miliseconds_re_deposition = 1;//ステージ上昇時の待機時間
 int graph_height = 500;
 int start_dash = 150;
 int count = 0;

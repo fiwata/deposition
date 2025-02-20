@@ -835,6 +835,7 @@ public:
 		direction = 1;
 	}
 
+	//加工時間計算
 	void total_time() {
 		if (!get_schmit_bool()) {
 			total_sec = total_sec + (miliseconds_re_deposition + other_time) * 0.001;
@@ -844,6 +845,7 @@ public:
 		}
 	}
 
+	//待機時間増加(速度低下)
 	void delay_time() {
 		double d, t;
 		d = atan(tan_now) / 2;
@@ -853,6 +855,7 @@ public:
 		vcalc();
 	}
 
+	//待機時間現象(速度上昇)
 	void reduce_time() {
 		if (!get_schmit_bool()) {
 			reduce_count = 0;
@@ -871,6 +874,7 @@ public:
 		}
 	}
 
+	//現在の角度入手
 	void cal_TAN() {
 		double L,HH,H;
 		if (x - px == 0 && y - py == 0) {
